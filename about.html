@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedEase Hospital</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('./pro1images/aceongEoi.png');
+            background-size: 1300px;
+            background-position:center;
+            margin-bottom: 2200px;
+            font-family: Arial, sans-serif;
+            color: rgb(13, 1, 1);
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay color with 50% opacity */
+            padding: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .founders {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .founders h2 {
+            margin-bottom: 20px;
+        }
+
+        .founders-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px; /* Fixed height for the founder images */
+            overflow: hidden; /* Hide any overflow */
+        }
+
+        .founders-images img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover; /* Fill the container while preserving aspect ratio */
+            display: none; /* Hide all images by default */
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="content">
+            <h1>Welcome to MedEase Hospital</h1>
+            <p>At MedEase Hospital, we are committed to providing compassionate and high-quality healthcare to our community. With a focus on patient-centered care, we strive to ensure that every individual who walks through our doors receives the best possible treatment and support.
+
+            Founded on the principles of excellence and integrity, MedEase Hospital has been serving the healthcare needs of our community for over a decade. Our team of experienced and dedicated healthcare professionals works tirelessly to deliver personalized care and innovative medical solutions to our patients.
+
+            At MedEase Hospital, we understand that healthcare is not just about treating illnesses; it's about caring for the whole person. That's why we offer a comprehensive range of medical services, including emergency care, general medicine, surgery, maternity care, and diagnostic services. Our state-of-the-art facilities and advanced technology enable us to provide the highest standard of care to our patients.
+
+            What sets MedEase Hospital apart is our commitment to excellence in everything we do. From our skilled medical staff to our compassionate support teams, everyone at MedEase is dedicated to making a positive difference in the lives of our patients. We believe that every individual deserves access to quality healthcare, and we are proud to be a trusted healthcare provider in our community.
+
+            As we continue to grow and expand our services, our commitment to excellence remains steadfast. At MedEase Hospital, we are not just healthcare providers; we are partners in your health and wellness journey. We invite you to learn more about our hospital and the services we offer, and we look forward to serving you and your family for years to come.</p>
+        </div>
+    </div>
+
+    <div class="founders">
+        <h2>THE FOUNDERS OF MED EASE</h2>
+        <div class="founders-images">
+            <img src="./pro1images/founders/chirag.jpg" alt="Founder 1">
+            <img src="./pro1images/founders/aayush.jpg" alt="Founder 2">
+            <img src="./pro1images/founders/991114-955719-bill-gates-new.avif" alt="Founder 3">
+        </div>
+    </div>
+
+    <script>
+        var foundersImages = document.querySelectorAll('.founders-images img');
+        var currentFounderIndex = 0;
+
+        function rotateFounders() {
+            foundersImages.forEach(function(image) {
+                image.style.display = 'none';
+            });
+
+            currentFounderIndex = (currentFounderIndex + 1) % foundersImages.length;
+            foundersImages[currentFounderIndex].style.display = 'block';
+
+            setTimeout(rotateFounders, 3000); // Rotate every 3 seconds
+        }
+
+       rotateFounders(); // Start the rotation
+    </script>
+</body>
+</html>
